@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    /* font-size:62.5%; */
+    font-family: 'Poppins', sans-serif;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height:100vh;
+    background-color:#9B59B6;
+}
+
+.wrapper{
+    background:#fff;
+    width:450px;
+    border-radius: 10px;
+}
+.wrapper header{
+    display:flex;
+    justify-content: space-between;
+    padding:25px 30px 10px;
+    align-items: center;
+}
+.current--date{
+    font-size:1.45rem;
+    font-weight:500;
+}
+header .icons i{
+    height:38px;
+    width:38px;
+    color:#878787;
+   font-size:1rem;
+    margin:0 1px;
+    line-height:38px;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+}
+header .icons i:hover{
+    background:#f2f2f2;
+}
+header .icons i:last-child{
+    margin-right:-10px;
+}
+.calender{
+    padding:20px;
+}
+.calender ul{
+    display:flex;
+    list-style: none;
+    flex-wrap:wrap;
+    text-align: center;
+}
+.calender .days{
+    margin-bottom:20px;
+}
+.calender .weeks li{
+    font-weight:600;
+}
+
+.calender ul li{
+    position: relative;
+    width:calc(100% / 7);
+}
+.calender .days li{
+    z-index:1;
+    cursor: pointer;
+    margin-top:30px;
+}
+.days li.inactive{
+    color:#aaa;
+}
+
+.calender .days li::before{
+    position:absolute;
+    content:'';
+    width:40px;
+    height:40px;
+    top:50%;
+    left:50%;
+   z-index:-1;
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+}
+.days li:hover::before{
+    background-color: #f2f2f2;
+}
+.days li.active::before{
+    background-color:#9B59B6;
+    
+}
+.days li.active{
+    color:#fff;
+}
+.tdy{
+    width:100%;
+    text-align: center;
+    margin-bottom:3rem;
+}
+.btn{
+    outline: none;
+    border: none;
+    background-color: #9B59B6;
+    color:#fff;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
